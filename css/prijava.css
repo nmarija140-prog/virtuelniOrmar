@@ -1,0 +1,134 @@
+:root{
+    --roze-pozadina: #E6AEBE;
+    --roze-glavna: #C4607E;
+    --roze-isklj: #D48C9E;
+    --tekst: #111111;
+    --tekst-sporedni: #3a3a3a;
+    --linija: #6b6b6b;
+}
+*{box-sizing: border-box;}
+html, body {margin: 0;}
+body{
+    font-family: 'Inter', sans-serif;
+    color: var(--tekst);
+    background: #d99aae;
+}
+.ekran{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 430px;
+    height: 100vh;
+    margin: 0 auto;
+    background: var(--roze-pozadina) url("../slike/pozadina.png") center / cover no-repeat;
+}
+.talas{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.sadrzaj{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 55%;
+    padding: 0 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    margin: 0 0 1.5rem;
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+.polje{
+    margin-bottom: 1.25rem;
+}
+.polje label{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+}
+.unos{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--linija);
+}
+.unos img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.unos input{
+    flex: 1;
+    min-width: 0;
+    padding-left: 0.75rem;
+    border: 0;
+    border-left: 1px solid var(--roze-glavna);
+    background: transparent;
+    font: inherit;
+    font-size: 1.0625rem;
+}
+.unos input:focus{
+    outline: none;
+}
+.redSaOpcijama{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.zapamti{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+.zapamti input{
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0;
+    border: 1.5px solid var(--roze-glavna);
+    border-radius: 50%;
+}
+.zapamti input:checked{
+    background: var(--roze-glavna);
+}
+.zaboravljenaLozinka{
+    color: var(--roze-glavna);
+    font-weight: 700;
+    text-decoration: none;
+}
+.greska{
+    color: #b3263f;
+    font-size: 0.875rem;
+}
+.dugme{
+    display: block;
+    width: 100%;
+    height: 54px;
+    margin: 1.75rem 0 0.75rem;
+    border: 0;
+    border-radius: 14px;
+    background: var(--roze-glavna);
+    color: #fff;
+    font: inherit;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+.dugme:disabled{
+    background: var(--roze-isklj);
+}
+.registracija{
+    margin: 0;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--tekst-sporedni);
+}
+.registracija a{
+    color: var(--roze-glavna);
+    text-decoration: none;
+}

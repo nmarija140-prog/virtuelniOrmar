@@ -1,6 +1,5 @@
 :root{
     --roze-pozadina: #E6AEBE;
-    --roze-svetlo: #FBEAF0;
     --roze-glavna: #C4607E;
     --tekst: #111111;
     --tekst-sporedni: #3a3a3a;
@@ -8,7 +7,7 @@
 *{box-sizing: border-box;}
 html, body {margin: 0; height: 100%;}
 body{
-    font-family: 'Inter', system-ui, -apple-system,'Segoe UI', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: var(--tekst);
     background: #d99aae;
 }
@@ -17,7 +16,6 @@ body{
     flex-direction: column;
     max-width: 430px;
     height: 100vh;
-    height: 100dvh;
     margin: 0 auto;
     overflow: hidden;
     background: var(--roze-pozadina) url("../slike/pozadina.png") center / cover no-repeat;
@@ -27,23 +25,17 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem 0;
 }
 .figurica{
-    height: clamp(240px, 42vh, 400px);
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
+    height: 40vh;
 }
 .opis{
-    flex: none;
     position: relative;
 }
 .talas{
     display: block;
     width: 100%;
     height: auto;
-    margin-bottom: -1px;
 }
 .sadrzaj{
     position: absolute;
@@ -57,23 +49,17 @@ body{
 }
 h1{
     margin: 0;
-    font-size: clamp(2.25rem, 10vw, 2.75rem);
-    line-height: 1.1;
-    font-weight: 700;
+    font-size: 2.75rem;
 }
 p{
     margin: 0.75rem 0 0;
-    max-width: 22rem;
     font-size: 0.95rem;
-    line-height: 1.45;
     color: var(--tekst-sporedni);
-    text-wrap: balance;
 }
 .nastavi{
     margin-top: auto;
-    padding-top: 2rem;
     align-self: flex-end;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 1rem;
     color: var(--tekst);
@@ -87,15 +73,8 @@ p{
     background: var(--roze-glavna);
     display: grid;
     place-items: center;
-    transition: transform 0.2s ease;
 }
-.strelica img {width: 1.5rem; height: 1.5rem;}
-.nastavi:hover .strelica{transform: translateX(10px);}
-.nastavi:focus-visible{
-    outline: 3px solid var(--roze-glavna);
-    outline-offset: 6px;
-    border-radius: 2rem;
-}
-@media (prefers-reduced-motion: reduce){
-    .strelica{transition: none;}
+.strelica img{
+    width: 1.5rem;
+    height: 1.5rem;
 }
