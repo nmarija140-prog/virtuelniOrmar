@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="sr">
 <head>
@@ -19,7 +22,7 @@
             <div class="sadrzaj">
                 <h1>Dobro došli</h1>
                 <p>Dodaj svoju odeću, obuci svoju figuricu i pronađi savršen outfit.</p>
-                <a class="nastavi" href="prijava.html">
+                <a class="nastavi" href="prijava.php">
                     <span>Nastavi</span>
                     <span class="strelica" aria-hidden="true">
                     <img src="slike/strelica.svg" alt="">
