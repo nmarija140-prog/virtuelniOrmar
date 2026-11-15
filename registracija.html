@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/registracija.css">
+</head>
+<body>
+    <main class="ekran">
+        <section class="opis">
+            <img class="talas" src="slike/Vector3.svg" alt="">
+            <form class="sadrzaj" id="formaRegistracija" novalidate>
+                <h1>Registracija</h1>
+
+                <div class="polje">
+                    <label for="email">Email</label>
+                    <div class="unos">
+                        <img src="slike/EnvelopeEmail.svg" alt="">
+                        <input type="email" name="email" id="email" placeholder="Unesite email adresu">
+                    </div>
+                </div>
+
+                <div class="polje">
+                    <label for="lozinka">Lozinka</label>
+                    <div class="unos">
+                        <img src="slike/KljucSifra.svg" alt="">
+                        <input type="password" name="lozinka" id="lozinka" placeholder="Unesite lozinku">
+                        <button class="oko" type="button" data-za="lozinka" aria-label="Prikaži lozinku">
+                            <img class="oko" src="slike/oko.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="polje">
+                    <label for="potvrda">Potvrda lozinke</label>
+                    <div class="unos">
+                        <img src="slike/KljucSifra.svg" alt="">
+                        <input type="password" name="potvrda" id="potvrda" placeholder="Potvrdite lozinku">
+                        <button class="oko" type="button" data-za="potvrda" aria-label="Prikaži lozinku">
+                            <img class="oko" src="slike/oko.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <p class="greska" id="greska" role="alert" hidden></p>
+                <button class="dugme" type="submit" id="dugmeRegistracija" disabled>Napravi nalog</button>
+                <p class="registracija">Već imate nalog? <a href="prijava.html">Prijavite se</a></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/registracija.js"></script>
+</body>
+</html>
