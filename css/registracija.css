@@ -122,9 +122,4 @@ h1{
     color: var(--roze-glavna);
     text-decoration: none;
 }
-.uspeh {
-    color: green;
-    font-size: 14px;
-    text-align: center;
-    margin-top: 10px;
-}
+

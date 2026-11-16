@@ -1,5 +1,6 @@
 <?php
 session_start();
+$prijava = "prijava.php";
 require_once "konekcija.php";
 $greska = "";
 $uspeh = "";
@@ -34,7 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmtInsert = $connection->prepare($sql);
             $stmtInsert->bind_param("ss", $email, $hashLozinke);
             if ($stmtInsert->execute()) {
-                $uspeh = "Uspešno ste napravili nalog! Sada možete da se prijavite.";
+            $uspeh = "Vaš nalog je napravljen. Preusmeravamo vas na prijavu...";
+            $email = "";
+            header("Refresh: 3.5; url=" . $prijava);
             } else {
                 $greska = "Došlo je do greške prilikom registracije.";
             }
@@ -59,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <main class="ekran">
         <section class="opis">
             <img class="talas" src="slike/Vector3.svg" alt="">
-            <form class="sadrzaj" id="formaRegistracija" novalidate>
+            <form class="sadrzaj" id="formaRegistracija" method="POST" novalidate>
                 <h1>Registracija</h1>
 
                 <div class="polje">
@@ -105,9 +108,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p class="greska" id="greska" role="alert" hidden></p>
                  <?php endif; ?>
                 <button class="dugme" type="submit" id="dugmeRegistracija">Napravi nalog</button>
-                <p class="registracija">Već imate nalog? <a href="prijava.html">Prijavite se</a></p>
+                <p class="registracija">Već imate nalog? <a href="prijava.php">Prijavite se</a></p>
             </form>
         </section>
     </main>
+    <script>
+    document.querySelectorAll(".oko").forEach(dugme => {
+        dugme.addEventListener("click", function() {
+
+            const idPolja = this.dataset.za;
+            const polje = document.getElementById(idPolja);
+
+            polje.type = polje.type === "password" ? "text" : "password";
+
+        });
+    });
+</script>
 </body>
 </html>
